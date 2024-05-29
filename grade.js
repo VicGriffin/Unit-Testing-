@@ -55,4 +55,8 @@ function ecs(grade2) {
     }
 }
 
+ function calculateGradesAndAverage(student) {
+    let avgPts = math.floor 
+ }
+
 module.exports = {mpc,re,ecs};
