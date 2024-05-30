@@ -77,6 +77,6 @@ describe("calculateGradesAndAverage", () => {
             computer: 36
         };
         const expectedResult = Math.floor((student.math + student.english + student.swahili + student.physics + student.chemistry + student.religiousEducation + student.computer) / 7)
-        expect(calculateGradesAndAverage(student)).toEqual(63);
+        expect(calculateGradesAndAverage(student)).toEqual(expectedResult);
     });
 });
