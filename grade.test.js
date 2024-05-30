@@ -1,4 +1,4 @@
-const {mpc,re,ecs} = require("./grade.js");
+const {mpc,re,ecs, calculateGradesAndAverage} = require("./grade.js");
 
 describe("mpc", () => {
     it("should return 'A' when the score is greater than 70", () => {
@@ -61,5 +61,22 @@ describe("ecs", () => {
 
     it("should return 'sup' when the score is less than or equal to 44", () => {
         expect(ecs(35)).toEqual('sup');
+    });
+});
+
+
+describe("calculateGradesAndAverage", () => {
+    it("should return an object with grades and average", () => {
+        const student = {
+            math: 80,
+            english: 50,
+            swahili: 60,
+            physics: 79,
+            chemistry: 70,
+            religiousEducation: 68,
+            computer: 36
+        };
+        const expectedResult = Math.floor((student.math + student.english + student.swahili + student.physics + student.chemistry + student.religiousEducation + student.computer) / 7)
+        expect(calculateGradesAndAverage(student)).toEqual(63);
     });
 });

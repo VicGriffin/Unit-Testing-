@@ -55,8 +55,9 @@ function ecs(grade2) {
     }
 }
 
- function calculateGradesAndAverage(student) {
-    let avgPts = math.floor 
- }
-
-module.exports = {mpc,re,ecs};
+function calculateGradesAndAverage(student) {
+    let avgPts = Math.floor((student.math + student.english + student.swahili + student.physics + student.chemistry + student.religiousEducation + student.computer) / 7);
+    
+    return avgPts;
+}
+module.exports = {mpc,re,ecs, calculateGradesAndAverage};
